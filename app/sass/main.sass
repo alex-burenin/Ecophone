@@ -1,0 +1,268 @@
+@import config
+
+.grid
+    display: grid
+
+.header-wrapper
+    z-index: 2
+    background: #FFFFFF
+    box-shadow: 0px 1px 0px rgba(155, 164, 193, 0.25)
+    width: 100%
+    height: 70px
+    align-items: center
+
+.header
+    grid-template-columns: 270px 220px 1fr 230px
+    grid-gap: $gutter
+    &:nth-child(2)
+        grid-column-gap: 140px
+
+.logo,
+.city,
+.free-number,
+.city-number,
+.dropdown-title
+    display: grid
+    grid-template-columns: 110px 1fr
+    font-size: 14px
+    align-items: center
+    grid-gap: 10px
+    &.city
+        grid-template-columns: 70px 1fr
+
+.free-number
+    grid-template-columns: 1fr 116px
+
+.city-number
+    grid-template-columns: 108px 113px
+    text-align: right
+    
+.label
+    text-align: right
+    color: $caption
+        
+.logo-descr
+    font-weight: 500
+    font-size: 10px
+    line-height: 14px
+    color: $caption
+
+.city-selection
+    cursor: pointer
+
+.number-phone,
+.city-title
+    font-family: $uninue
+    font-weight: 700
+
+
+.dropdown-arrow svg
+    display: block
+    align-items: center
+
+.header-banner
+    background-image: url('../images/dest/header-bg.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    align-content: center
+    margin:
+        top: 1px
+        bottom: 150px
+    min-height: 690px
+    background-size: cover
+
+.banner-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 96px
+    padding:
+        top: 170px
+        bottom: 110px
+
+.utp
+    display: grid
+    grid-template-rows: 30px 1fr 85px
+    grid-gap: $gutter
+    
+
+.utp-subheader
+    text-align: right
+    font-weight: 700
+    font-size: 24px
+    line-height: 18px
+    text-transform: uppercase
+    color: $addition
+    padding:
+        top: 12px
+        right: 40px
+
+.utp-brand
+    font-weight: 300
+    font-size: 130px
+    line-height: 0.7
+    text-align: left
+    margin: 0
+        left: -12px
+
+.offer
+    grid-template-columns: 170px 1fr
+    grid-gap: $gutter
+    align-items: center
+    padding-bottom: 30px
+    
+.utp-descr
+    font-weight: 350
+    font-size: 22px
+    line-height: 28px
+
+.promo-video
+    position: relative
+    max-width: 570px
+    height: 305px
+
+.promo-preview
+    border-radius: 14px
+
+
+// ---------------------------------------------
+
+// PLAY BUTTON
+
+// ---------------------------------------------
+    
+
+.play
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+
+.play-button
+    display: flex
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    background: linear-gradient(180deg, #FFC92E 0%, #F3B602 100%)
+    box-shadow: inset -0.8px 1.5px 0px #FFFDF8, 0px 25px 70px rgba(103, 124, 148, 1)
+    align-items: center
+    justify-content: center
+    outline: none
+    cursor: pointer
+    
+    svg
+        transform: translateX(15%)
+        transition: 0.2s ease-in-out
+    
+    &::before
+        position: absolute
+        content: ''
+        display: block
+        width: 118px
+        height: 118px
+        border-radius: 50%
+        box-shadow: inset -1px -1px 0px #FFFFFF
+        transition: 0.4s ease-in-out
+
+    &::after
+        position: absolute
+        content: ''
+        display: block
+        width: 152px
+        height: 152px
+        box-shadow: inset 3px -3px 0px #FFFFFF, inset 2px 0px 0px rgba(255, 255, 255, 0.5), inset -2px -2px 0px rgba(255, 255, 255, 0.3)
+        border-radius: 50%
+        transition: 0.4s ease-in-out
+
+    &:hover
+        background: linear-gradient(180deg, #E2A800 0%, #F3B602 100%)
+        svg
+            width: 20px
+            height: 24px
+        &::before
+            transform: rotate(-180deg)
+
+        &::after
+            transform: rotate(145deg)
+
+
+.price-offer
+    position: relative
+    box-sizing: border-box
+    grid-template-columns: 370px 1fr
+    align-items: center
+    padding: 44px 58px 44px 48px
+    background-color: #ffffff
+    border-radius: 14px
+    border: solid 2px $lines
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        background-color: $addition
+        height: 5px
+        width: 91%
+        top: -2px
+        left: 50%
+        border-radius: 0 0 5px 5px
+        transform: translateX(-50%)
+    &::before
+        content: ''
+        position: absolute
+        z-index: -10
+        display: block
+        width: 1060px
+        height: 148px
+        top: 40%
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 50%
+        background: #4C6386
+        opacity: 0.25
+        filter: blur(65px)
+        
+        
+.price-title
+    grid-gap: 6px
+    span
+        font-size: 24px
+        font-weight: 700
+        line-height: 28px
+    p
+        color: $caption
+        margin: 0
+
+.price-form
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: $gutter
+    align-items: center
+    input,button
+        width: 100%
+
+.using-sphere
+    margin-bottom: 150px
+
+.sphere-header
+    grid-template-columns: 1fr 1fr
+    grid-gap: 100px
+
+.sphere-title
+    grid-template-rows: 1fr 1fr 50px
+    h2
+        font-family: $uninue
+	    font-weight: 700
+        font-size: 42px
+        line-height: 48px
+        margin: 0
+    p
+        margin: 0
+    a
+        max-width: 236px
+
+
+.sphere-selection
+	grid-template-columns: repeat(3, 203px)
+    grid-gap: $gutter
+
+.sphere-item
+    align-self: center
+    
