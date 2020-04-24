@@ -240,6 +240,7 @@
 
 .using-sphere
     margin-bottom: 150px
+    gap: 70px
 
 .sphere-header
     grid-template-columns: 1fr 1fr
@@ -260,6 +261,9 @@
     a
         max-width: 236px
 
+.ecophone-title
+    color: $addition
+    font-weight: 350
 
 .sphere-selection
     grid-template-columns: repeat(3, 203px)
@@ -267,4 +271,39 @@
 
 .sphere-item
     align-self: center
-    
+
+.sphere-content
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    gap: $gutter
+
+.content-item
+    position: relative
+    img
+        display: block
+        border-radius: 10px
+    &:hover
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: $addition
+            opacity: 0.8
+            border-radius: 10px
+            cursor: pointer
+            
+        &::after
+            position: absolute
+            content: url('../images/src/search.svg')
+            display: block
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 36px
+            height: 36px
+            cursor: pointer
+        
