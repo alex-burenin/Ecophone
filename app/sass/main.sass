@@ -13,7 +13,7 @@
 
 .header
     grid-template-columns: 270px 220px 1fr 230px
-    grid-gap: $gutter
+    gap: $gutter
     &:nth-child(2)
         grid-column-gap: 140px
 
@@ -82,7 +82,7 @@
 .utp
     display: grid
     grid-template-rows: 30px 1fr 85px
-    grid-gap: $gutter
+    gap: $gutter
     
 
 .utp-subheader
@@ -106,7 +106,7 @@
 
 .offer
     grid-template-columns: 170px 1fr
-    grid-gap: $gutter
+    gap: $gutter
     align-items: center
     padding-bottom: 30px
     
@@ -243,25 +243,27 @@
 
 .sphere-header
     grid-template-columns: 1fr 1fr
-    grid-gap: 100px
+    gap: 100px
 
 .sphere-title
-    grid-template-rows: 1fr 1fr 50px
+    grid-template-rows: 1fr 60px 50px
     h2
-        font-family: $uninue
-	    font-weight: 700
+        font-weight: 700
         font-size: 42px
         line-height: 48px
-        margin: 0
+        margin: 
+            top: -14px
+            bottom: 18px
     p
         margin: 0
+        color: #72798E
     a
         max-width: 236px
 
 
 .sphere-selection
-	grid-template-columns: repeat(3, 203px)
-    grid-gap: $gutter
+    grid-template-columns: repeat(3, 203px)
+    gap: $gutter
 
 .sphere-item
     align-self: center
